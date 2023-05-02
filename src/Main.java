@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         task1();
+        task2();
     }
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
@@ -23,4 +24,13 @@ public class Main {
              }
              System.out.println(" Сумма трат за месяц составила " + sum + " рублей ");
          }
-}
+    public static void task2() {
+        System.out.println("Задача 2");
+        int[] arr = generateRandomArray();
+        int[] arr2 = arr.clone();
+        Arrays.sort(arr2);
+        int lastElements = arr2[arr2.length - 1];
+        System.out.println(" Минимальная сумма трат за день составила " + arr2[0] + " рублей. Максимальная сумма трат за день составила " + lastElements + " рублей ");
+        }
+    }
+
